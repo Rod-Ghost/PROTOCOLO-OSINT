@@ -1,0 +1,15 @@
+# Acordo de Licença Rodrigo Roldan
+
+Essas ferramentas, scripts, tutoriais e arquivos são disponibilizados gratuitamente com o objetivo de promover a colaboração, aprendizado e desenvolvimento. Você tem total liberdade para usar, adaptar e modificar o conteúdo para fins pessoais, educacionais e governamentais, desde que respeite as seguintes condições:
+
+## **Uso Não Comercial**
+Você pode explorar, experimentar e utilizar esses recursos em seus projetos, pesquisas e atividades cotidianas. No entanto, a **exploração comercial**—incluindo, mas não se limitando a, treinamentos pagos, serviços empresariais ou venda deste conteúdo—está estritamente proibida. Se quiser lucrar, vai precisar ser criativo em outros lugares!
+
+## **Não Distribuição**
+Compartilhar é importante, mas a **redistribuição deste conteúdo**—seja em formato digital, na internet ou através de meios físicos—é restrita. Sinta-se à vontade para indicar a fonte original, mas evite distribuir o material por conta própria. Isso inclui copiar, fazer upload ou hospedar o material em outros locais sem permissão expressa.
+
+## **Direitos Autorais**
+Este conteúdo é de propriedade de **Rodrigo Roldan**, © 2024. Todos os direitos reservados.
+
+## **Ausência de Garantia**
+As ferramentas e os recursos são fornecidos "como estão". Embora tenham sido criados com paixão e cuidado, **não há garantias** explícitas ou implícitas, incluindo, mas não se limitando a, garantias de comercialização, adequação a um propósito específico ou não violação de direitos. Em nenhum caso o autor será responsável por qualquer reivindicação, danos ou outras responsabilidades, seja em uma ação contratual, civil ou outra, decorrente do uso ou de outras interações com o conteúdo.
