@@ -1,0 +1,177 @@
+Updated: October 6, 2021
+<!-- Para uso APENAS com computadores Windows -->
+<!-- Estas instruções ajudarão na criação da sua máquina personalizada e serão atualizadas conforme as mudanças ocorrerem -->
+<!-- Detalhes completos de uso estão disponíveis no livro: Protocolo OSINT -->
+<!-- Copyright 2024 Rodrigo Roldan -->
+<!-- Estas instruções são fornecidas 'como estão', sem garantia de qualquer tipo -->
+<!-- Em nenhum caso o titular dos direitos autorais será responsável por qualquer reclamação, danos ou outra responsabilidade -->
+
+-------------------------------------------------------------------------------
+INSTALL CHOCOLATEY & APPLICATIONS
+-------------------------------------------------------------------------------
+<!-- (Menu > Digite cmd > clique com o botão direito em Prompt de Comando > Executar como Administrador > Digite o seguinte:) -->
+@"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command " [System.Net.ServicePointManager]::SecurityProtocol = 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
+<!-- Instalar os seguintes pacotes com Chocolatey: -->
+choco install python3 youtube-dl yt-dlp googlechrome ffmpeg httrack exiftool exiftoolgui ripgrep vlc tor-browser googleearthpro keepassxc mediainfo git curl unzip wget phantomjs streamlink firefox
+<!-- (Digite 'a' quando solicitado e reinicie quando terminar) -->
+
+-------------------------------------------------------------------------------
+CONFIGURE FIREFOX
+-------------------------------------------------------------------------------
+(Open Firefox, close it, and enter the following in Command Prompt:)
+cd %userprofile%\Downloads\
+curl -u osint8:book4529zw -O https://inteltechniques.com/osintbook8/ff-template.zip
+unzip ff-template.zip
+cd %USERPROFILE%\AppData\Roaming\Mozilla\Firefox\Profiles\*.default-release
+xcopy /Y /E %userprofile%\Downloads\ff-template\*
+(Open Firefox, close, reopen, and confirm extensions and settings)
+
+-------------------------------------------------------------------------------
+CONFIGURE CUSTOM SCRIPTS
+-------------------------------------------------------------------------------
+cd %userprofile%\Desktop
+curl -u osint8:book4529zw -O https://inteltechniques.com/osintbook8/windows-files.zip
+curl -u osint8:book4529zw -O https://inteltechniques.com/osintbook8/tools.zip
+unzip tools.zip -d %userprofile%\Desktop
+unzip windows-files.zip -d %userprofile%\Documents
+del windows-files.zip tools.zip
+
+-------------------------------------------------------------------------------
+INSTALL PYTHON APPLICATIONS
+-------------------------------------------------------------------------------
+py -m ensurepip
+py -m pip install --upgrade pip
+py -m pip install requests --upgrade
+py -m pip install Instaloader
+py -m pip install instalooter
+py -m pip install nested-lookup
+py -m pip install internetarchive
+py -m pip install webscreenshot
+py -m pip install redditsfinder
+py -m pip install socialscan
+py -m pip install holehe
+py -m pip install waybackpy
+py -m pip install gallery-dl
+mkdir %userprofile%\Downloads\Programs
+cd %userprofile%\Downloads\Programs
+wget https://github.com/OWASP/Amass/releases/latest/download/amass_windows_amd64.zip
+unzip *.zip
+del *.zip
+git clone https://github.com/nlitsme/youtube_tool.git
+git clone https://github.com/aboul3la/Sublist3r.git
+cd Sublist3r
+py -m pip install -r requirements.txt
+cd %userprofile%\Downloads\Programs
+git clone https://github.com/s0md3v/Photon.git
+cd Photon
+py -m pip install -r requirements.txt
+cd %userprofile%\Downloads\Programs
+git clone https://github.com/laramies/theHarvester.git
+cd theHarvester
+py -m pip install -r requirements.txt --ignore-installed
+cd %userprofile%\Downloads\Programs
+git clone https://github.com/opsdisk/metagoofil.git
+cd metagoofil
+py -m pip install -r requirements.txt
+cd %userprofile%\Downloads\Programs
+git clone https://github.com/lanmaster53/recon-ng.git
+cd recon-ng
+py -m pip install -r REQUIREMENTS
+cd %userprofile%\Downloads\Programs
+git clone https://github.com/sherlock-project/sherlock.git
+cd sherlock
+py -m pip install -r requirements.txt
+cd %userprofile%\Downloads\Programs
+git clone https://github.com/WebBreacher/WhatsMyName.git
+cd WhatsMyName
+py -m pip install -r requirements.txt
+cd %userprofile%\Downloads\Programs
+git clone https://github.com/smicallef/spiderfoot.git
+cd spiderfoot
+py -m pip install -r requirements.txt
+cd %userprofile%\Downloads\Programs
+git clone https://github.com/AmIJesse/Elasticsearch-Crawler.git
+cd %userprofile%\Downloads\Programs
+git clone https://github.com/aliparlakci/bulk-downloader-for-reddit.git
+cd bulk-downloader-for-reddit
+py -m pip install -r requirements.txt
+
+-------------------------------------------------------------------------------
+ADD PROGRAMS TO DESKTOP (OPTIONAL)
+-------------------------------------------------------------------------------
+You can drag and drop the files within the Documents\windows-files\shortcuts folder anywhere you like, including another folder or the Desktop.
+
+-------------------------------------------------------------------------------
+APPLY UPDATES (ALSO AVAILABLE IN 'UPDATES' SCRIPT)
+-------------------------------------------------------------------------------
+choco upgrade all
+py -m pip install pip -U
+py -m pip install youtube-tool -U
+py -m pip install Instaloader -U
+py -m pip install instalooter -U
+py -m pip install nested-lookup -U
+py -m pip install internetarchive -U
+py -m pip install webscreenshot -U
+py -m pip install redditsfinder -U
+py -m pip install socialscan -U
+py -m pip install holehe -U
+py -m pip install waybackpy -U
+py -m pip install gallery-dl -U
+cd %userprofile%\Downloads\Programs\Sublist3r
+git pull https://github.com/aboul3la/Sublist3r.git
+py -m pip install -r requirements.txt
+cd %userprofile%\Downloads\Programs\Photon
+git pull https://github.com/s0md3v/Photon.git
+py -m pip install -r requirements.txt
+cd %userprofile%\Downloads\Programs\theHarvester
+git pull https://github.com/laramies/theHarvester.git
+py -m pip install -r requirements.txt --ignore-installed
+cd %userprofile%\Downloads\Programs\metagoofil
+git pull https://github.com/opsdisk/metagoofil.git
+py -m pip install -r requirements.txt
+cd %userprofile%\Downloads\Programs\recon-ng
+git pull https://github.com/lanmaster53/recon-ng.git
+py -m pip install -r REQUIREMENTS
+cd %userprofile%\Downloads\Programs\sherlock
+git pull https://github.com/sherlock-project/sherlock.git
+py -m pip install -r requirements.txt
+cd %userprofile%\Downloads\Programs\WhatsMyName
+git pull https://github.com/WebBreacher/WhatsMyName.git
+py -m pip install -r requirements.txt
+cd %userprofile%\Downloads\Programs\spiderfoot
+git pull https://github.com/smicallef/spiderfoot.git
+py -m pip install -r requirements.txt
+cd %userprofile%\Downloads\Programs\Elasticsearch-Crawler
+git pull https://github.com/AmIJesse/Elasticsearch-Crawler.git
+cd %userprofile%\Downloads\Programs\bulk-downloader-for-reddit
+git pull https://github.com/aliparlakci/bulk-downloader-for-reddit.git
+py -m pip install -r requirements.txt
+
+-------------------------------------------------------------------------------
+REVERSE ALL MODIFICATIONS
+-------------------------------------------------------------------------------
+py -m pip uninstall youtube-tool Instaloader instalooter nested-lookup internetarchive webscreenshot redditsfinder socialscan holehe waybackpy gallery-dl -y
+cd %userprofile%\Downloads\Programs\Sublist3r
+py -m pip uninstall -r requirements.txt -y
+cd %userprofile%\Downloads\Programs\Photon
+py -m pip uninstall -r requirements.txt -y
+cd %userprofile%\Downloads\Programs\theHarvester
+py -m pip uninstall -r requirements.txt -y
+cd %userprofile%\Downloads\Programs\metagoofil
+py -m pip uninstall -r requirements.txt -y
+cd %userprofile%\Downloads\Programs\recon-ng
+py -m pip uninstall -r REQUIREMENTS -y
+cd %userprofile%\Downloads\Programs\sherlock
+py -m pip uninstall -r requirements.txt -y
+cd %userprofile%\Downloads\Programs\WhatsMyName
+py -m pip uninstall -r requirements.txt -y
+cd %userprofile%\Downloads\Programs\spiderfoot
+py -m pip uninstall -r requirements.txt -y
+cd %userprofile%\Downloads\Programs\bulk-downloader-for-reddit
+py -m pip uninstall -r requirements.txt -y
+cd %userprofile%\Desktop
+del *.lnk
+rmdir /Q /S %userprofile%\Documents\windows-files\
+rmdir /Q /S %userprofile%\Downloads\Programs
+choco uninstall all
+rmdir /Q /S \ProgramData\chocolatey
