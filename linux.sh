@@ -1,14 +1,15 @@
 #!/usr/bin/env bash
-## Updated: Updated: January 1, 2022
-## For use ONLY with Ubuntu 20.04
-## These will assist with the creation of your custom machine and will be updated as things change
-## Full usage details are available in the book: https://inteltechniques.com/book1.html
-## Slight variations may be present for Windows/Mac users (such as 'Next' vs. 'Continue')
-## Please send any issues to errors@inteltechniques.com
-## Copyright 2022 Michael Bazzell
-## These instructions are provided 'as is' without warranty of any kind
-## In no event shall the copyright holder be liable for any claim, damages or other liability
-## Full license information and restrictions at https://inteltechniques.com/osintbook8/license.txt
+
+##<!-- Atualizado: 18/10/2024 -->
+##<!-- Para uso APENAS com Ubuntu 20.04 -->
+##<!-- Estas instruções ajudarão na criação da sua máquina personalizada e serão atualizadas conforme as mudanças ocorrerem -->
+##<!-- Detalhes completos de uso estão disponíveis no livro: Protocolo OSINT -->
+##<!-- Algumas variações podem estar presentes para usuários de Windows/Mac (como 'Avançar' vs. 'Continuar') -->
+##<!-- Estas instruções são fornecidas 'como estão', sem garantia de qualquer tipo -->
+##<!-- Em nenhum caso o titular dos direitos autorais será responsável por qualquer reclamação, danos ou outra responsabilidade -->
+##<!-- Informações completas sobre licenças e restrições estão disponíveis em https://inteltechniques.com/osintbook8/license.txt -->
+
+
 sudo adduser osint vboxsf
 sudo apt purge -y apport
 sudo apt remove -y popularity-contest
